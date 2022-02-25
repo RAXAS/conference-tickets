@@ -1,10 +1,7 @@
-ticket_num = int(input("How many tickets?"))
+ticket_num = int(input("How many tickets?\n"))
 total_price = 0
-a = ticket_num
-while a > 0:
-    age = int(input("How years old of visitor?"))
-    a -= 1
 for i in range(ticket_num):
+    age = int(input("How years old of visitor?\n"))
     if 18 <= age < 25:
         total_price += 990
     elif age < 18:
@@ -12,5 +9,5 @@ for i in range(ticket_num):
     elif age >= 25:
         total_price += 1390
 if ticket_num > 3:
-    total_price = int(total_price - total_price * 0.1)
-print(total_price)
+    total_price *= 0.9
+print(f"Total price for {ticket_num} ticket(s)", int(total_price))
